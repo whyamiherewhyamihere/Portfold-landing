@@ -1,0 +1,84 @@
+.funds {
+    padding: 110px 0;
+}
+
+.head {
+    max-width: 760px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.mainIcon {
+    display: grid;
+    width: 92px;
+    height: 92px;
+    margin: 0 auto 28px;
+    place-items: center;
+    border: 1px solid rgb(45 234 148 / 35%);
+    border-radius: 50%;
+    background: rgb(45 234 148 / 10%);
+}
+
+.mainIcon img {
+    width: 42px;
+    height: 42px;
+}
+
+.head h2 {
+    margin: 0;
+    color: var(--color-text);
+    font-size: 42px;
+    font-weight: 800;
+    line-height: 1.1;
+    letter-spacing: -0.04em;
+}
+
+.head p {
+    margin: 22px auto 0;
+    color: var(--color-text-secondary);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    margin-top: 62px;
+}
+
+.card {
+    min-height: 140px;
+    padding: 28px;
+    border: 1px solid rgb(55 102 102 / 60%);
+    border-radius: 18px;
+    background:
+        radial-gradient(circle at 50% 0%, rgb(45 234 148 / 8%), transparent 45%),
+        #0b1715;
+    text-align: center;
+}
+
+.card img {
+    width: 34px;
+    height: 34px;
+}
+
+.card h3 {
+    margin: 18px 0 0;
+    color: var(--color-text);
+    font-size: 16px;
+    font-weight: 800;
+}
+
+.card p {
+    margin: 12px 0 0;
+    color: var(--color-text-secondary);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+@media (max-width: 900px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+}

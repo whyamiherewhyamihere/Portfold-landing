@@ -1,0 +1,250 @@
+.hero {
+  padding: 48px 0 90px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 616px 616px;
+  gap: 48px;
+  align-items: start;
+}
+
+.content {
+  padding-top: 43px;
+}
+
+.title {
+  width: 616px;
+  margin: 0;
+  color: var(--color-text);
+  font-size: 60px;
+  font-weight: 700;
+  line-height: 75px;
+  letter-spacing: 0.26px;
+}
+
+.title span {
+  display: block;
+}
+
+.darkAccent {
+  color: #376666;
+}
+
+.greenAccent {
+  color: var(--color-accent);
+}
+
+.text {
+  width: 616px;
+  margin: 24px 0 0;
+  color: var(--color-text-secondary);
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 32.5px;
+  letter-spacing: -0.45px;
+}
+
+.actions {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  width: 616px;
+  height: 58px;
+  margin-top: 20px;
+}
+
+.primaryButton,
+.secondaryButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 58px;
+  border-radius: 999px;
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  letter-spacing: -0.31px;
+}
+
+.primaryButton {
+  gap: 10px;
+  width: 253px;
+  padding: 0 32px;
+  background: #376666;
+}
+
+.primaryButton img {
+  width: 16px;
+  height: 16px;
+}
+
+.secondaryButton {
+  width: 253px;
+  border: 1px solid rgb(55 102 102 / 40%);
+  background: transparent;
+}
+
+.portfolioCard {
+  width: 616px;
+  height: 518px;
+  padding: 58px 58px 46px;
+  border: 1px solid rgb(55 102 102 / 40%);
+  border-radius: 52px;
+  background:
+    linear-gradient(180deg,
+      rgb(61 220 132 / 8%) 0%,
+      rgb(0 0 0 / 0%) 30%),
+    #0b1212;
+}
+
+.cardTop {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cardLabel {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: -0.44px;
+}
+
+.percent {
+  color: var(--color-accent);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.31px;
+}
+
+.cardValue {
+  display: block;
+  margin-top: 8px;
+  color: var(--color-text);
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 40px;
+  letter-spacing: 0.37px;
+}
+
+.chartBox {
+  width: 500px;
+  height: 192px;
+  margin-top: 16px;
+  padding: 16px;
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgb(11 18 18 / 40%);
+}
+
+.chartImage {
+  display: block;
+  width: 466px;
+  height: 158px;
+  object-fit: fill;
+}
+
+.assets {
+  display: grid;
+  grid-template-columns: repeat(3, 158.67px);
+  gap: 12px;
+  width: 500px;
+  height: 94px;
+  margin-top: 24px;
+}
+
+.assetCard {
+  display: grid;
+  height: 70px;
+  place-items: center;
+  padding: 12px;
+  border: 1px solid rgb(55 102 102 / 40%);
+  border-radius: 16px;
+  background: rgb(55 102 102 / 10%);
+}
+
+.assetCard span {
+  color: var(--color-text-secondary);
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+}
+
+.assetCard strong {
+  color: var(--color-text);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.31px;
+}
+
+@media (max-width: 1280px) {
+  .container {
+    grid-template-columns: 1fr;
+  }
+
+  .content,
+  .title,
+  .text,
+  .actions,
+  .portfolioCard {
+    width: 100%;
+  }
+
+  .portfolioCard {
+    max-width: 616px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero {
+    padding: 32px 0 64px;
+  }
+
+  .title {
+    font-size: 42px;
+    line-height: 50px;
+  }
+
+  .text {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .actions {
+    flex-direction: column;
+    align-items: stretch;
+    height: auto;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+
+  .portfolioCard {
+    height: auto;
+    padding: 32px;
+    border-radius: 32px;
+  }
+
+  .chartBox,
+  .assets {
+    width: 100%;
+  }
+
+  .chartImage {
+    width: 100%;
+  }
+
+  .assets {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+}

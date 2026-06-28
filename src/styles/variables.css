@@ -1,0 +1,11 @@
+:root {
+  --color-bg: #0b1212;
+  --color-surface: #0b1715;
+  --color-surface-2: #102020;
+  --color-border: #376666;
+  --color-accent: #2dea94;
+  --color-accent-light: #55f0a4;
+  --color-text: #f4fffb;
+  --color-text-secondary: #9bb0aa;
+  --container-width: 1200px;
+}

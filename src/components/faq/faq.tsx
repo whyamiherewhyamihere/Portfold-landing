@@ -47,7 +47,9 @@ export function Faq() {
                   onClick={() => setOpenedIndex(isOpen ? null : index)}
                 >
                   <span>{item.question}</span>
-                  <span className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ''}`}>⌄</span>
+                  <span className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ''}`}>
+                    ⌄
+                  </span>
                 </button>
 
                 {isOpen && <p className={styles.answer}>{item.answer}</p>}

@@ -10,7 +10,7 @@ import { Container } from '../../shared/ui/container/container';
 
 import styles from './features.module.css';
 
-const users = [
+const people = [
   { name: 'Sarah Chen', email: 'sarah@email.com', role: 'Owner' },
   { name: 'Alex Morgan', email: 'alex@email.com', role: 'Editor' },
   { name: 'Jamie Lee', email: 'jamie@email.com', role: 'View only' },
@@ -30,22 +30,23 @@ export function Features() {
 
         <div className={styles.grid}>
           <article className={`${styles.card} ${styles.connectCard}`}>
-            <div className={styles.cardHeader}>
-              <h3>Connect exchanges and wallets</h3>
+            <div className={styles.cardTop}>
+              <div>
+                <h3>Connect exchanges and wallets</h3>
+                <p>
+                  Link Bitget, Binance, Ethereum, and Solana or add assets manually.
+                  Portfold brings everything together in one portfolio.
+                </p>
+              </div>
 
-              <span className={styles.badge}>
+              <span className={styles.statusBadge}>
                 <img src={okIcon} alt="" />
                 Dust Filter Active
               </span>
             </div>
 
-            <p>
-              Link Bitget, Binance, Ethereum, and Solana or add assets manually. Portfold
-              brings everything together in one portfolio.
-            </p>
-
-            <div className={styles.connectContent}>
-              <div className={styles.inputs}>
+            <div className={styles.connectVisual}>
+              <div className={styles.inputList}>
                 <span>Bitget exchange</span>
                 <span>Solana Wallet</span>
                 <span>Manual asset</span>
@@ -65,16 +66,15 @@ export function Features() {
           </article>
 
           <article className={`${styles.card} ${styles.backupCard}`}>
-            <img src={fingerprintIcon} alt="" className={styles.bigIcon} />
+            <img className={styles.fingerprint} src={fingerprintIcon} alt="" />
 
             <h3>Encrypted portfolio backup</h3>
-
             <p>
               Your portfolio data is encrypted before it is backed up, helping you restore
               access if you change or lose your device.
             </p>
 
-            <span className={styles.smallBadge}>
+            <span className={styles.backupBadge}>
               <img src={lockIcon} alt="" />
               Encrypted before backup
             </span>
@@ -87,20 +87,19 @@ export function Features() {
             </h3>
 
             <p>
-              Give a trusted person access to selected portfolio without sharing passwords.
+              Give a trusted person access to selected portfolio without sharing
+              passwords.
             </p>
 
-            <div className={styles.userList}>
-              {users.map((user) => (
-                <div className={styles.userRow} key={user.email}>
+            <div className={styles.people}>
+              {people.map((person) => (
+                <div className={styles.person} key={person.email}>
                   <span className={styles.avatar} />
-
                   <div>
-                    <strong>{user.name}</strong>
-                    <small>{user.email}</small>
+                    <strong>{person.name}</strong>
+                    <small>{person.email}</small>
                   </div>
-
-                  <em>{user.role}</em>
+                  <em>{person.role}</em>
                 </div>
               ))}
             </div>
@@ -108,14 +107,13 @@ export function Features() {
 
           <article className={`${styles.card} ${styles.historyCard}`}>
             <h3>Keep your portfolio history</h3>
-
             <p>
               Disconnect an exchange or wallet without losing the portfolio data that was
               already saved.
             </p>
 
             <div className={styles.historyBox}>
-              <div className={styles.trashIcon}>
+              <div className={styles.trash}>
                 <img src={trashIcon} alt="" />
               </div>
 
@@ -126,7 +124,7 @@ export function Features() {
 
               <em>History saved</em>
 
-              <p className={styles.savedText}>
+              <p className={styles.saved}>
                 <img src={shieldIcon} alt="" />
                 Previously saved balances remain in your portfolio history after the
                 account is disconnected.

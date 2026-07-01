@@ -44,7 +44,8 @@ export function AiAssistant() {
                 <div>
                   <h3>Personal summaries</h3>
                   <p>
-                    Understand what changed and which assets affected your portfolio value.
+                    Understand what changed and which assets affected your portfolio
+                    value.
                   </p>
                 </div>
               </article>

@@ -161,8 +161,8 @@
   background: #10201d;
 }
 
-.allocationBox>strong,
-.reviewBox>strong {
+.allocationBox > strong,
+.reviewBox > strong {
   color: var(--color-text);
   font-size: 14px;
 }
@@ -206,11 +206,13 @@
   display: block;
   height: 8px;
   border-radius: 999px;
-  background: linear-gradient(90deg,
-      var(--color-accent) 0%,
-      var(--color-accent) 70%,
-      rgb(45 234 148 / 14%) 70%,
-      rgb(45 234 148 / 14%) 100%);
+  background: linear-gradient(
+    90deg,
+    var(--color-accent) 0%,
+    var(--color-accent) 70%,
+    rgb(45 234 148 / 14%) 70%,
+    rgb(45 234 148 / 14%) 100%
+  );
 }
 
 .lineBlock p {

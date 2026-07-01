@@ -35,9 +35,9 @@ export function Funds() {
           <h2>Your funds stay under your control</h2>
 
           <p>
-            Portfold only reads the information needed to display your portfolio. It cannot
-            trade, transfer, or withdraw your crypto. Sensitive data is encrypted, and
-            access to the app can be protected with biometrics.
+            Portfold only reads the information needed to display your portfolio. It
+            cannot trade, transfer, or withdraw your crypto. Sensitive data is encrypted,
+            and access to the app can be protected with biometrics.
           </p>
         </div>
 

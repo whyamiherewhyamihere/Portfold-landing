@@ -28,12 +28,12 @@
 
 .grid {
   display: grid;
-  grid-template-columns: 411px 414px 411px;
-  grid-template-rows: 388px 418px;
-  gap: 20px;
   grid-template-areas:
     "connect connect backup"
     "share history history";
+  grid-template-columns: 411px 414px 411px;
+  grid-template-rows: 388px 418px;
+  gap: 20px;
 }
 
 .card {
@@ -66,7 +66,7 @@
   grid-area: connect;
   width: 845px;
   height: 388px;
-  padding: 40px;
+  padding: 32px;
 }
 
 .backupCard {
@@ -76,7 +76,7 @@
   height: 388px;
   justify-items: center;
   align-content: center;
-  padding: 40px;
+  padding: 32px;
   text-align: center;
 }
 
@@ -84,14 +84,14 @@
   grid-area: share;
   width: 411px;
   height: 418px;
-  padding: 40px;
+  padding: 32px;
 }
 
 .historyCard {
   grid-area: history;
   width: 845px;
   height: 418px;
-  padding: 40px;
+  padding: 32px;
 }
 
 .cardTop {
@@ -118,15 +118,14 @@
 }
 
 .statusBadge img,
-.backupBadge img,
-.saved img {
+.backupBadge img {
   width: 16px;
   height: 16px;
 }
 
 .connectVisual {
   display: grid;
-  grid-template-columns: 337px 64px 173px;
+  grid-template-columns: 337px 41px 173px;
   gap: 44px;
   align-items: center;
   margin-top: 40px;
@@ -138,6 +137,7 @@
 }
 
 .inputList span {
+  position: relative;
   display: flex;
   align-items: center;
   height: 48px;
@@ -150,36 +150,14 @@
   font-weight: 700;
 }
 
-.filter {
-  display: grid;
-  justify-items: center;
-  color: #3ddc84;
-}
-
-.filter img {
-  width: 24px;
-  height: 27px;
-}
-
-.filter span {
-  margin-top: 8px;
-  color: #3ddc84;
-  font-size: 12px;
-  font-weight: 700;
-  writing-mode: vertical-rl;
-}
-
-.portfolioBox {
-  display: grid;
-  width: 173px;
-  height: 186px;
-  justify-items: center;
-  align-content: center;
-  border: 1px solid rgb(61 220 132 / 40%);
-  border-radius: 16px;
-  background:
-    linear-gradient(90deg,
-      #3ddc84 0%,
+.inputList span::after {
+  position: absolute;
+  top: 50%;
+  right: -32px;
+  width: 32px;
+  height: 4px;
+  background: linear-gradient(90deg,
+      rgb(61 220 132 / 100%) 0%,
       rgb(51 188 112 / 89%) 11%,
       rgb(41 157 93 / 78%) 22%,
       rgb(31 127 74 / 67%) 33%,
@@ -188,9 +166,96 @@
       rgb(6 45 23 / 33%) 67%,
       rgb(2 22 8 / 22%) 78%,
       rgb(0 3 1 / 11%) 89%,
-      rgb(0 0 0 / 0%) 100%),
-    #10201d;
+      rgb(0 0 0 / 0%) 100%);
+  content: "";
+  transform: translateY(-50%);
+}
+
+.filter {
+  position: relative;
+  display: grid;
+  width: 41px;
+  height: 192px;
+  justify-items: center;
+  align-content: center;
+  color: #3ddc84;
+}
+
+.filter::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 192px;
+  background: repeating-linear-gradient(to bottom,
+      rgb(61 220 132 / 40%) 0,
+      rgb(61 220 132 / 40%) 4px,
+      transparent 4px,
+      transparent 6px);
+  content: "";
+}
+
+.filter img {
+  z-index: 1;
+  width: 24px;
+  height: 27px;
+}
+
+.filter span {
+  z-index: 1;
+  margin-top: 16px;
+  color: #3ddc84;
+  font-size: 12px;
+  font-weight: 700;
+  writing-mode: vertical-rl;
+}
+
+.portfolioBox {
+  position: relative;
+  display: grid;
+  width: 173px;
+  height: 186px;
+  justify-items: center;
+  align-content: center;
+  border: 1px solid rgb(61 220 132 / 40%);
+  border-radius: 16px;
+  background: linear-gradient(135deg,
+      rgb(55 102 102 / 40%) 0%,
+      rgb(61 220 132 / 20%) 100%);
   text-align: center;
+}
+
+.portfolioBox::before,
+.portfolioBox::after,
+.portfolioBox strong::before {
+  position: absolute;
+  left: -32px;
+  width: 32px;
+  height: 4px;
+  background: linear-gradient(90deg,
+      rgb(0 0 0 / 0%) 0%,
+      rgb(0 3 1 / 11%) 11%,
+      rgb(2 22 8 / 22%) 22%,
+      rgb(6 45 23 / 33%) 33%,
+      rgb(13 71 39 / 44%) 44%,
+      rgb(22 98 56 / 56%) 56%,
+      rgb(31 127 74 / 67%) 67%,
+      rgb(41 157 93 / 78%) 78%,
+      rgb(51 188 112 / 89%) 89%,
+      rgb(61 220 132 / 100%) 100%);
+  content: "";
+}
+
+.portfolioBox::before {
+  top: 58px;
+}
+
+.portfolioBox::after {
+  top: 91px;
+}
+
+.portfolioBox strong::before {
+  top: 124px;
 }
 
 .portfolioBox img {
@@ -209,6 +274,7 @@
   margin-top: 8px;
   color: #94a3b8;
   font-size: 12px;
+  line-height: 16px;
 }
 
 .fingerprint {
@@ -256,7 +322,7 @@
   height: 56px;
   padding: 8px;
   border: 1px solid rgb(55 102 102 / 40%);
-  border-radius: 999px;
+  border-radius: 26px;
   background: #0b1212;
 }
 
@@ -282,15 +348,30 @@
   font-size: 11px;
 }
 
-.person em,
-.historyBox em {
-  padding: 6px 12px;
-  border-radius: 999px;
-  background: rgb(61 220 132 / 10%);
-  color: #3ddc84;
-  font-size: 11px;
+.role {
+  display: inline-flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  height: 26px;
+  padding: 4px 8px;
+  border: 1px solid rgb(55 102 102 / 40%);
+  border-radius: 24px;
+  background: rgb(55 102 102 / 20%);
+  color: #94a3b8;
+  font-size: 12px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
+  line-height: 16px;
+}
+
+.person:first-child .role {
+  color: #3ddc84;
+}
+
+.role img {
+  width: 12px;
+  height: 12px;
 }
 
 .historyBox {
@@ -300,9 +381,25 @@
   align-items: center;
   margin-top: 48px;
   padding: 24px;
-  border: 1px solid rgb(55 102 102 / 35%);
-  border-radius: 16px;
-  background: rgb(55 102 102 / 10%);
+  border: 1px solid rgb(55 102 102 / 40%);
+  border-radius: 24px;
+  background: rgb(55 102 102 / 20%);
+}
+
+.historyBox em {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  padding: 6px 12px;
+  border: 1px solid rgb(61 220 132 / 30%);
+  border-radius: 24px;
+  background: rgb(61 220 132 / 10%);
+  color: #3ddc84;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
 }
 
 .trash {
@@ -310,8 +407,9 @@
   width: 48px;
   height: 48px;
   place-items: center;
+  border: 1px solid rgb(55 102 102 / 40%);
   border-radius: 50%;
-  background: rgb(55 102 102 / 40%);
+  background: rgb(55 102 102 / 20%);
 }
 
 .trash img {
@@ -332,25 +430,36 @@
 .historyBox span {
   margin-top: 4px;
   color: #94a3b8;
-  font-size: 12px;
+  font-size: 14px;
+  line-height: 20px;
 }
 
-.saved {
+.card .saved {
   display: flex;
   grid-column: 1 / -1;
   gap: 8px;
   align-items: center;
+  margin: 0;
+  color: #94a3b8;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: -0.15px;
+}
+
+.card .saved img {
+  width: 16px;
+  height: 16px;
 }
 
 @media (width <=1280px) {
   .grid {
-    grid-template-columns: 1fr;
-    grid-template-rows: auto;
     grid-template-areas:
       "connect"
       "backup"
       "share"
       "history";
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
   }
 
   .connectCard,
@@ -363,6 +472,19 @@
 
   .connectVisual {
     grid-template-columns: 1fr;
+  }
+
+  .inputList span::after,
+  .portfolioBox::before,
+  .portfolioBox::after,
+  .portfolioBox span::before,
+  .filter::before {
+    display: none;
+  }
+
+  .filter {
+    width: auto;
+    height: auto;
   }
 
   .filter span {

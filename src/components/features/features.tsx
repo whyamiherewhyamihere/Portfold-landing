@@ -6,6 +6,7 @@ import okIcon from '../../assets/icons/ok.svg';
 import shieldIcon from '../../assets/icons/shield.svg';
 import trashIcon from '../../assets/icons/trash.svg';
 import usersIcon from '../../assets/icons/users.svg';
+import arrowRightIcon from '../../assets/icons/arrow-right.svg';
 import { Container } from '../../shared/ui/container/container';
 
 import styles from './features.module.css';
@@ -99,7 +100,10 @@ export function Features() {
                     <strong>{person.name}</strong>
                     <small>{person.email}</small>
                   </div>
-                  <em>{person.role}</em>
+                  <em className={styles.role}>
+                       {person.role}
+                           <img src={arrowRightIcon} alt="" />
+                  </em>
                 </div>
               ))}
             </div>

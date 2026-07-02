@@ -15,16 +15,18 @@ export function Hero() {
     <section className={styles.hero}>
       <Container className={styles.container}>
         <div className={styles.content}>
-          <h1 className={styles.title}>
-            <span>Manage all your</span>
-            <span className={styles.darkAccent}>crypto assets</span>
-            <span className={styles.greenAccent}>in one secure app.</span>
-          </h1>
+         <h1 className={styles.title}>
+  <span>Manage all your</span>
+  <span>crypto assets</span>
+  <span>
+    in <span className={styles.greenAccent}>one secure app</span>
+  </span>
+</h1>
 
           <p className={styles.text}>
-            Connect your exchanges and wallets, add assets manually, and see your entire
-            crypto portfolio in one place. Portfold can track your balances, but it cannot
-            trade or withdraw your funds.
+            Connect your exchanges and wallets, add assets manually, and see your
+            entire crypto portfolio in one place. Portfold can track your
+            balances, but it cannot trade or withdraw your funds.
           </p>
 
           <div className={styles.actions}>
@@ -33,7 +35,10 @@ export function Hero() {
               Download for Android
             </a>
 
-            <a className={styles.secondaryButton} href="#how-it-works">
+            <a
+              className={styles.secondaryButton}
+              href="#how-it-works"
+            >
               See how Portfold works
             </a>
           </div>
@@ -45,10 +50,16 @@ export function Hero() {
             <span className={styles.percent}>+24.5%</span>
           </div>
 
-          <strong className={styles.cardValue}>$128,492.50</strong>
+          <strong className={styles.cardValue}>
+            $128,492.50
+          </strong>
 
           <div className={styles.chartBox}>
-            <img src={areaChart} alt="" className={styles.chartImage} />
+            <img
+              src={areaChart}
+              alt=""
+              className={styles.chartImage}
+            />
           </div>
 
           <div className={styles.assets}>

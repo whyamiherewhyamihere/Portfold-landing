@@ -23,16 +23,13 @@
   letter-spacing: 0.26px;
 }
 
-.title span {
+.title>span {
   display: block;
 }
 
-.darkAccent {
-  color: #376666;
-}
-
 .greenAccent {
-  color: var(--color-accent);
+  display: inline;
+  color: #3ddc84;
 }
 
 .text {
@@ -93,7 +90,8 @@
   border: 1px solid rgb(55 102 102 / 40%);
   border-radius: 52px;
   background:
-    linear-gradient(180deg, rgb(61 220 132 / 8%) 0%, rgb(0 0 0 / 0%) 30%), #0b1212;
+    linear-gradient(180deg, rgb(61 220 132 / 8%) 0%, rgb(0 0 0 / 0%) 30%),
+    #0b1212;
 }
 
 .cardTop {

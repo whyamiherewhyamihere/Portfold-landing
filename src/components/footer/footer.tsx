@@ -1,8 +1,6 @@
-import githubIcon from '../../assets/icons/github.svg';
-import linkedinIcon from '../../assets/icons/linkedin.svg';
 import logoIcon from '../../assets/icons/logo.svg';
-import twitterIcon from '../../assets/icons/twitter.svg';
 import { Container } from '../../shared/ui/container/container';
+import { Link } from 'react-router-dom';
 
 import styles from './footer.module.css';
 
@@ -35,27 +33,16 @@ export function Footer() {
 
           <nav className={styles.column}>
             <h3>Legal</h3>
-            <a href="/">Privacy Policy</a>
-            <a href="/">Terms of Service</a>
+            <Link to="/privacy-policy">Privacy Policy</Link>
+            <Link to="/terms-of-use">Terms of Use</Link>
           </nav>
         </div>
 
         <div className={styles.bottom}>
-          <p>© 2026 Portfold. All rights reserved.</p>
-
-          <div className={styles.socials}>
-            <a href="/" aria-label="Twitter">
-              <img src={twitterIcon} alt="" />
-            </a>
-            <a href="/" aria-label="GitHub">
-              <img src={githubIcon} alt="" />
-            </a>
-            <a href="/" aria-label="LinkedIn">
-              <img src={linkedinIcon} alt="" />
-            </a>
-          </div>
+          <p>© 2026 Portfold. All rights reserved.</p> 
         </div>
       </Container>
     </footer>
   );
 }
+

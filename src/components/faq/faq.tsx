@@ -1,5 +1,6 @@
 import { useState } from 'react';
 
+import arrowRightIcon from '../../assets/icons/arrow-right.svg';
 import { Container } from '../../shared/ui/container/container';
 
 import styles from './faq.module.css';
@@ -47,9 +48,11 @@ export function Faq() {
                   onClick={() => setOpenedIndex(isOpen ? null : index)}
                 >
                   <span>{item.question}</span>
-                  <span className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ''}`}>
-                    ⌄
-                  </span>
+                  <img
+                    src={arrowRightIcon}
+                    alt=""
+                    className={`${styles.arrow} ${isOpen ? styles.arrowOpen : ''}`}
+                  />
                 </button>
 
                 {isOpen && <p className={styles.answer}>{item.answer}</p>}

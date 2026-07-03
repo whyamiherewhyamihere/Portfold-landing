@@ -13,7 +13,7 @@
     "format:check": "prettier . --check",
     "check": "npm run lint && npm run lint:styles && npm run format:check",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist"
+    "deploy": "npm run build && copy dist\\index.html dist\\404.html && gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.2.7",

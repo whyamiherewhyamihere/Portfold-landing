@@ -165,13 +165,100 @@
 }
 
 @media (width <=1280px) {
+  .overview {
+    padding: 72px 0 96px;
+  }
+
   .container {
     grid-template-columns: 1fr;
+    gap: 48px;
   }
 
   .content h2,
   .content p,
   .card {
     width: 100%;
+  }
+
+  .card {
+    max-width: 616px;
+    height: auto;
+  }
+}
+
+@media (width <=640px) {
+  .overview {
+    padding: 48px 0 72px;
+  }
+
+  .container {
+    gap: 32px;
+  }
+
+  .content h2 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.2px;
+  }
+
+  .content p {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.2px;
+  }
+
+  .card {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .allocationRow {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    margin-top: 28px;
+  }
+
+  .roundDiagram {
+    width: 140px;
+    height: 140px;
+    margin: 24px auto 0;
+  }
+
+  .breakdown ul {
+    gap: 14px;
+    margin-top: 16px;
+  }
+
+  .history {
+    margin-top: 32px;
+  }
+
+  .chartWrapper {
+    grid-template-columns: 44px 1fr;
+    width: 100%;
+    height: 170px;
+  }
+
+  .yAxis {
+    padding-bottom: 28px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .areaChart {
+    width: 100%;
+    height: 138px;
+  }
+
+  .xAxis {
+    margin-top: 6px;
+    font-size: 11px;
+    line-height: 16px;
   }
 }

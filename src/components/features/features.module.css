@@ -34,6 +34,7 @@
   grid-template-columns: 411px 414px 411px;
   grid-template-rows: 388px 418px;
   gap: 20px;
+  justify-content: center;
 }
 
 .card {
@@ -63,6 +64,7 @@
 }
 
 .connectCard {
+  position: relative;
   grid-area: connect;
   width: 845px;
   height: 388px;
@@ -95,9 +97,17 @@
 }
 
 .cardTop {
-  display: flex;
-  justify-content: space-between;
-  gap: 24px;
+  display: block;
+}
+
+.cardTop>div {
+  max-width: 610px;
+}
+
+.statusBadge {
+  position: absolute;
+  top: 32px;
+  right: 32px;
 }
 
 .statusBadge,
@@ -452,13 +462,17 @@
 }
 
 @media (width <=1280px) {
+  .features {
+    padding: 56px 0 96px;
+  }
+
   .grid {
     grid-template-areas:
       "connect"
       "backup"
       "share"
       "history";
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto;
   }
 
@@ -470,6 +484,16 @@
     height: auto;
   }
 
+  .statusBadge {
+    position: static;
+    width: fit-content;
+  }
+
+  .cardTop {
+    display: grid;
+    gap: 14px;
+  }
+
   .connectVisual {
     grid-template-columns: 1fr;
   }
@@ -477,7 +501,7 @@
   .inputList span::after,
   .portfolioBox::before,
   .portfolioBox::after,
-  .portfolioBox span::before,
+  .portfolioBox strong::before,
   .filter::before {
     display: none;
   }
@@ -489,5 +513,148 @@
 
   .filter span {
     writing-mode: initial;
+  }
+}
+
+@media (width <=640px) {
+  .features {
+    margin-top: 32px;
+    padding: 40px 0 72px;
+  }
+
+  .head {
+    margin-bottom: 32px;
+  }
+
+  .head h2 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: -0.2px;
+  }
+
+  .head p {
+    max-width: 100%;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .grid {
+    gap: 14px;
+  }
+
+  .card {
+    border-radius: 24px;
+  }
+
+  .card h3 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+
+  .card p {
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .connectCard,
+  .backupCard,
+  .shareCard,
+  .historyCard {
+    padding: 24px;
+  }
+
+  .statusBadge,
+  .backupBadge {
+    width: fit-content;
+    max-width: 100%;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+    line-height: 16px;
+    white-space: normal;
+  }
+
+  .connectVisual {
+    gap: 20px;
+    margin-top: 28px;
+  }
+
+  .inputList {
+    gap: 12px;
+  }
+
+  .inputList span {
+    height: 44px;
+    padding: 0 16px;
+    font-size: 13px;
+    border-radius: 14px;
+  }
+
+  .filter {
+    display: none;
+  }
+
+  .portfolioBox {
+    width: 100%;
+    height: auto;
+    min-height: 160px;
+    padding: 24px;
+  }
+
+  .backupCard {
+    min-height: 300px;
+  }
+
+  .fingerprint {
+    width: 72px;
+    height: 72px;
+    margin-bottom: 24px;
+  }
+
+  .people {
+    gap: 12px;
+    margin-top: 28px;
+  }
+
+  .person {
+    grid-template-columns: 40px 1fr;
+    height: auto;
+    min-height: 64px;
+    gap: 12px;
+    border-radius: 22px;
+  }
+
+  .role {
+    grid-column: 2;
+    width: fit-content;
+    height: 24px;
+    margin-top: 6px;
+    font-size: 11px;
+  }
+
+  .historyBox {
+    grid-template-columns: 40px 1fr;
+    gap: 12px;
+    margin-top: 28px;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .trash {
+    width: 40px;
+    height: 40px;
+  }
+
+  .historyBox em {
+    grid-column: 1 / -1;
+    width: fit-content;
+    height: 30px;
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+
+  .card .saved {
+    font-size: 13px;
+    line-height: 20px;
   }
 }

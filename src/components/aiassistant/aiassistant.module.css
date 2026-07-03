@@ -3,10 +3,10 @@
 }
 
 .card {
-  width: 1242px;
+  width: 100%;
   min-height: 594px;
   padding: 48px;
-  border: 1px solid rgb(55 102 102 / 100%);
+  border: 1px solid rgb(61 220 132 / 15%);
   border-radius: 32px;
   background: rgb(11 23 21 / 58%);
 }
@@ -256,9 +256,14 @@
   font-weight: 800;
 }
 
-@media (max-width: 1280px) {
+@media (width <=1280px) {
+  .assistant {
+    padding: 80px 0;
+  }
+
   .card {
-    width: 100%;
+    min-height: auto;
+    padding: 40px;
   }
 
   .content {
@@ -270,10 +275,140 @@
   .preview {
     width: 100%;
   }
+
+  .previewHeader {
+    width: 100%;
+  }
 }
 
-@media (max-width: 980px) {
+@media (width <=640px) {
+  .assistant {
+    padding: 64px 0;
+  }
+
+  .card {
+    padding: 24px;
+    border-radius: 24px;
+  }
+
+  .titleRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+  }
+
+  .titleRow h2 {
+    font-size: 32px;
+    line-height: 36px;
+  }
+
+  .titleRow span {
+    width: 132px;
+    height: 34px;
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .head p {
+    margin-top: 14px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .content {
+    gap: 24px;
+    margin-top: 28px;
+  }
+
+  .alerts {
+    gap: 14px;
+  }
+
+  .alertCard {
+    gap: 14px;
+    min-height: auto;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .iconBox {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+  }
+
+  .iconBox img {
+    width: 22px;
+    height: 22px;
+  }
+
+  .alertCard h3 {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .alertCard p {
+    max-width: none;
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .preview {
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .previewHeader {
+    flex-direction: column;
+    min-height: auto;
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .previewHeader strong {
+    font-size: 16px;
+  }
+
+  .previewHeader span {
+    font-size: 12px;
+  }
+
+  .previewHeader em {
+    align-self: flex-start;
+    width: 78px;
+    height: 26px;
+    font-size: 10px;
+  }
+
   .previewGrid {
     grid-template-columns: 1fr;
+    gap: 14px;
+    margin-top: 14px;
   }
+
+  .allocationBox,
+  .reviewBox {
+    min-height: auto;
+    padding: 18px;
+    border-radius: 16px;
+  }
+
+  .progressCircle {
+    width: 84px;
+    height: 84px;
+    border-width: 9px;
+  }
+
+  .progressCircle span {
+    font-size: 20px;
+  }
+
+ @media (width <=1280px) {
+   .note {
+     padding: 4px 18px;
+     font-size: 8px;
+     line-height: 12px;
+   }
+ }
 }

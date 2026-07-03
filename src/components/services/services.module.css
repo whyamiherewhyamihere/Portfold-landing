@@ -100,6 +100,15 @@
 }
 
 @media (max-width: 980px) {
+  .services {
+    margin-top: 48px;
+    padding: 48px 0;
+  }
+
+  .title {
+    margin-bottom: 40px;
+  }
+
   .firstRow,
   .secondRow {
     flex-direction: column;
@@ -108,5 +117,56 @@
 
   .chip {
     width: min(100%, 327px);
+  }
+}
+
+@media (max-width: 640px) {
+  .services {
+    margin-top: 32px;
+    padding: 40px 0;
+  }
+
+  .title {
+    max-width: 280px;
+    margin: 0 auto 28px;
+    font-size: 14px;
+    line-height: 22px;
+  }
+
+  .rows {
+    gap: 12px;
+  }
+
+  .firstRow,
+  .secondRow {
+    width: 100%;
+    gap: 12px;
+  }
+
+  .chip {
+    width: 100%;
+    height: 58px;
+    justify-content: space-between;
+    gap: 12px;
+    padding: 0 16px;
+    border-radius: 18px;
+  }
+
+  .label {
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 0;
+  }
+
+  .statusBadge {
+    height: 28px;
+    padding: 0 10px;
+    font-size: 11px;
+    line-height: 16px;
+  }
+
+  .dot {
+    width: 6px;
+    height: 6px;
   }
 }

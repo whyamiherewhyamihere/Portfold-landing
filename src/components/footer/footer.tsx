@@ -10,10 +10,10 @@ export function Footer() {
       <Container>
         <div className={styles.top}>
           <div className={styles.brand}>
-            <a className={styles.logo} href="/">
+            <Link className={styles.logo} to="/">
               <img src={logoIcon} alt="" />
               <span>Portfold</span>
-            </a>
+           </Link>
 
             <p>
               Manage exchanges, wallets, and manually added crypto assets in one secure

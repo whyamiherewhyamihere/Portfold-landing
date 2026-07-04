@@ -34,7 +34,7 @@ function Landing() {
 
 function App() {
   return (
-    <BrowserRouter basename="/Portfold-landing">
+   <BrowserRouter basename="/Portfold-landing">
   <ScrollToTop />
       <Routes>
         <Route path="/" element={<Landing />} />

@@ -1,6 +1,7 @@
 # Privacy Policy
 
-Effective date: May 20, 2026<br>
+Effective date: May 20, 2026
+
 Last updated: June 6, 2026
 
 This Privacy Policy explains how OLEGUM SRL ("OLEGUM", "we", "us", or "our") collects, uses, discloses, stores, and protects personal data when you use Portfold, including the Portfold mobile applications, `https://portfold.app`, `https://api.portfold.app`, and related services (together, the "Service").
@@ -11,9 +12,12 @@ Portfold is a cryptocurrency portfolio tracking service. It helps users record i
 
 The data controller for the Service is:
 
-OLEGUM SRL<br>
-Registration/tax identifier: RO52838329<br>
-Address: Str. SERII, Nr. 2, Et. 3, Ap. 97, Romania<br>
+OLEGUM SRL
+
+Registration/tax identifier: RO52838329
+
+Address: Str. SERII, Nr. 2, Et. 3, Ap. 97, Romania
+
 Email: info@koral.solutions
 
 For privacy questions, account deletion requests, data access requests, or other privacy rights requests, contact us at `info@koral.solutions`.
@@ -228,7 +232,10 @@ We may update this Privacy Policy from time to time. If we make material changes
 
 ## 15. Contact
 
-OLEGUM SRL<br>
-Registration/tax identifier: RO52838329<br>
-Address: Str. SERII, Nr. 2, Et. 3, Ap. 97, Romania<br>
+OLEGUM SRL
+
+Registration/tax identifier: RO52838329
+
+Address: Str. SERII, Nr. 2, Et. 3, Ap. 97, Romania
+
 Email: info@koral.solutions

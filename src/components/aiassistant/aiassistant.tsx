@@ -12,7 +12,7 @@ export function AiAssistant() {
           <div className={styles.head}>
             <div>
               <div className={styles.titleRow}>
-                <h2>Portfolio Assistant</h2>
+                <h2>AI Portfolio Assistant</h2>
                 <span>Coming Soon</span>
               </div>
 

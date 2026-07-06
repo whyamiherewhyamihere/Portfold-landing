@@ -524,18 +524,21 @@
 
   .head {
     margin-bottom: 32px;
+    text-align: left;
   }
 
   .head h2 {
     font-size: 32px;
     line-height: 36px;
     letter-spacing: -0.2px;
+    margin: 0;
   }
 
   .head p {
     max-width: 100%;
     font-size: 14px;
     line-height: 22px;
+    margin: 16px 0 0;
   }
 
   .grid {
@@ -601,60 +604,145 @@
     padding: 24px;
   }
 
-  .backupCard {
-    min-height: 300px;
-  }
-
-  .fingerprint {
-    width: 72px;
-    height: 72px;
-    margin-bottom: 24px;
-  }
+    .backupCard {
+      min-height: 300px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    .fingerprint {
+      width: 72px;
+      height: 72px;
+      align-self: center;
+      margin-bottom: 24px;
+    }
+  
+    .backupCard h3,
+    .backupCard p {
+      width: 100%;
+      text-align: left;
+    }
+  
+    .backupBadge {
+      align-self: flex-start;
+    }
 
   .people {
     gap: 12px;
     margin-top: 28px;
   }
 
-  .person {
-    grid-template-columns: 40px 1fr;
-    height: auto;
-    min-height: 64px;
-    gap: 12px;
-    border-radius: 22px;
-  }
+ .person {
+   grid-template-columns: 40px 1fr auto;
+   height: auto;
+   min-height: 80px;
+   gap: 12px;
+   padding: 12px;
+   border-radius: 22px;
+ }
 
-  .role {
-    grid-column: 2;
-    width: fit-content;
-    height: 24px;
-    margin-top: 6px;
-    font-size: 11px;
-  }
+ .role {
+   grid-column: auto;
+   align-self: center;
+   width: fit-content;
+   height: 28px;
+   margin-top: 0;
+   padding: 4px 10px;
+   font-size: 12px;
+   white-space: nowrap;
+ }
 
-  .historyBox {
-    grid-template-columns: 40px 1fr;
-    gap: 12px;
-    margin-top: 28px;
-    padding: 18px;
-    border-radius: 20px;
-  }
-
-  .trash {
-    width: 40px;
-    height: 40px;
-  }
-
-  .historyBox em {
-    grid-column: 1 / -1;
-    width: fit-content;
-    height: 30px;
-    padding: 5px 10px;
-    font-size: 12px;
-  }
-
-  .card .saved {
-    font-size: 13px;
-    line-height: 20px;
-  }
+    .trash {
+      width: 42px;
+      height: 42px;
+    }
+  
+    .trash img {
+      width: 20px;
+      height: 20px;
+    }
+    .historyBox {
+      display: grid;
+      grid-template-columns: 24px minmax(0, 1fr) auto;
+      gap: 10px 12px;
+      align-items: start;
+      margin-top: 28px;
+      padding: 18px;
+      border-radius: 20px;
+    }
+  
+    .trash {
+      grid-column: 1;
+      grid-row: 1;
+      display: grid;
+      width: 24px;
+      height: 24px;
+      place-items: center;
+      border: 0;
+      background: transparent;
+    }
+  
+    .trash img {
+      width: 18px;
+      height: 18px;
+    }
+  
+    .historyBox>div:nth-child(2) {
+      grid-column: 2;
+      grid-row: 1;
+      min-width: 0;
+    }
+  
+    .historyBox em {
+      grid-column: 3;
+      grid-row: 1;
+      align-self: start;
+      justify-self: end;
+      width: fit-content;
+      height: 28px;
+      margin: 0;
+      padding: 5px 10px;
+      font-size: 11px;
+      white-space: nowrap;
+    }
+  
+    .card .saved {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 24px minmax(0, 1fr);
+      gap: 12px;
+      align-items: start;
+      font-size: 13px;
+      line-height: 20px;
+    }
+  
+    .card .saved img {
+      width: 18px;
+      height: 18px;
+      justify-self: center;
+      margin-top: 1px;
+    }
+        .shareCard {
+          position: relative;
+        }
+    
+        .shareCard h3 {
+          display: block;
+          padding-right: 40px;
+          text-align: left;
+        }
+    
+        .shareCard h3 img {
+          position: absolute;
+          top: 24px;
+          right: 24px;
+          width: 24px;
+          height: 24px;
+        }
+    
+        .shareCard>p {
+          text-align: left;
+        }
 }

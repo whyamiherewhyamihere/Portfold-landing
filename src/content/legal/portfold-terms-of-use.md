@@ -1,6 +1,7 @@
 # Terms of Use
 
-Effective date: May 20, 2026<br>
+Effective date: May 20, 2026
+
 Last updated: May 20, 2026
 
 These Terms of Use ("Terms") govern your access to and use of Portfold, including the Portfold mobile applications, `https://portfold.app`, `https://api.portfold.app`, and related services (together, the "Service"). The Service is provided by OLEGUM SRL ("OLEGUM", "we", "us", or "our").
@@ -9,9 +10,12 @@ By creating an account, accessing, or using the Service, you agree to these Term
 
 ## 1. Provider Details
 
-OLEGUM SRL<br>
-Registration/tax identifier: RO52838329<br>
-Address: Str. SERII, Nr. 2, Et. 3, Ap. 97, Romania<br>
+OLEGUM SRL
+
+Registration/tax identifier: RO52838329
+
+Address: Str. SERII, Nr. 2, Et. 3, Ap. 97, Romania
+
 Email: info@koral.solutions
 
 ## 2. The Service
@@ -205,7 +209,10 @@ Your continued use of the Service after updated Terms become effective means you
 
 For questions about these Terms, contact:
 
-OLEGUM SRL<br>
-Registration/tax identifier: RO52838329<br>
-Address: Str. SERII, Nr. 2, Et. 3, Ap. 97, Romania<br>
+OLEGUM SRL
+
+Registration/tax identifier: RO52838329
+
+Address: Str. SERII, Nr. 2, Et. 3, Ap. 97, Romania
+
 Email: info@koral.solutions

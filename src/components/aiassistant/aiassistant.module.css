@@ -246,14 +246,12 @@
 }
 
 .note {
-  width: fit-content;
-  margin: 22px auto 0;
-  padding: 6px 28px;
-  border-radius: 999px;
-  background: rgb(61 220 132 / 10%);
-  color: #f2fff9;
-  font-size: 10px;
-  font-weight: 800;
+  margin: 24px 0 0;
+  color: rgb(242 255 249 / 75%);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 16px;
+  text-align: center;
 }
 
 @media (width <=1280px) {
@@ -404,11 +402,17 @@
     font-size: 20px;
   }
 
- @media (width <=1280px) {
-   .note {
-     padding: 4px 18px;
-     font-size: 8px;
-     line-height: 12px;
-   }
+ 
+  @media (width <=640px) {
+      .note {
+        margin: 14px 0 0;
+        padding: 0;
+        color: rgb(242 255 249 / 75%);
+        background: transparent;
+        font-size: 11px;
+        font-weight: 600;
+        line-height: 16px;
+        text-align: left;
+      }
+    }
  }
-}

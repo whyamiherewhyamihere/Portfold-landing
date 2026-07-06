@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 import { AiAssistant } from './components/aiassistant/aiassistant';
@@ -14,12 +15,18 @@ import { TermsOfUse } from './pages/legal/terms-of-use';
 import { ScrollToTop } from './shared/ui/scroll-to-top/scroll-to-top';
 
 function Landing() {
+  const [showHeaderDownloadIcons, setShowHeaderDownloadIcons] = useState(false);
+
   return (
     <>
-      <Header />
+      <Header showDownloadIcons={showHeaderDownloadIcons} />
 
       <main>
-        <Hero />
+        <Hero
+          onDownloadActionsVisibleChange={(isVisible) =>
+            setShowHeaderDownloadIcons(!isVisible)
+          }
+        />
         <Services />
         <Features />
         <Overview />
@@ -34,8 +41,9 @@ function Landing() {
 
 function App() {
   return (
-   <BrowserRouter basename="/Portfold-landing">
-  <ScrollToTop />
+    <BrowserRouter basename="/Portfold-landing">
+      <ScrollToTop />
+
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />

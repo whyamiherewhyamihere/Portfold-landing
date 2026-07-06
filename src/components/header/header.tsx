@@ -1,8 +1,14 @@
+import androidIcon from '../../assets/icons/android.svg';
+import appleIcon from '../../assets/icons/apple.svg';
 import logoIcon from '../../assets/icons/logo.svg';
 
-import styles from './Header.module.css';
+import styles from './header.module.css';
 
-export function Header() {
+type HeaderProps = {
+  showDownloadIcons: boolean;
+};
+
+export function Header({ showDownloadIcons }: HeaderProps) {
   return (
     <header className={styles.header}>
       <div className={styles.inner}>
@@ -18,9 +24,17 @@ export function Header() {
           <a href="#faq">FAQ</a>
         </nav>
 
-        <a className={styles.button} href="#download">
-          Download
-        </a>
+        {showDownloadIcons && (
+          <div className={styles.downloadIcons}>
+            <a href="#" aria-label="Download for Android">
+              <img src={androidIcon} alt="" />
+            </a>
+
+            <a href="#" aria-label="Download for iPhone">
+              <img src={appleIcon} alt="" />
+            </a>
+          </div>
+        )}
       </div>
     </header>
   );

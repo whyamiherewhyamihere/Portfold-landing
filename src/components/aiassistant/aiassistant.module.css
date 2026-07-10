@@ -186,8 +186,8 @@
   background: #152121;
 }
 
-.allocationBox>strong,
-.reviewBox>strong {
+.allocationBox > strong,
+.reviewBox > strong {
   color: #ddfbf0;
   font-size: 15px;
   font-weight: 700;
@@ -232,11 +232,13 @@
   display: block;
   height: 8px;
   border-radius: 999px;
-  background: linear-gradient(90deg,
-      #3ddc84 0%,
-      #3ddc84 70%,
-      rgb(61 220 132 / 14%) 70%,
-      rgb(61 220 132 / 14%) 100%);
+  background: linear-gradient(
+    90deg,
+    #3ddc84 0%,
+    #3ddc84 70%,
+    rgb(61 220 132 / 14%) 70%,
+    rgb(61 220 132 / 14%) 100%
+  );
 }
 
 .lineBlock p {
@@ -402,17 +404,16 @@
     font-size: 20px;
   }
 
- 
   @media (width <=640px) {
-      .note {
-        margin: 14px 0 0;
-        padding: 0;
-        color: rgb(242 255 249 / 75%);
-        background: transparent;
-        font-size: 11px;
-        font-weight: 600;
-        line-height: 16px;
-        text-align: left;
-      }
+    .note {
+      margin: 14px 0 0;
+      padding: 0;
+      color: rgb(242 255 249 / 75%);
+      background: transparent;
+      font-size: 11px;
+      font-weight: 600;
+      line-height: 16px;
+      text-align: left;
     }
- }
+  }
+}

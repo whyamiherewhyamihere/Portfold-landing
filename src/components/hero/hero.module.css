@@ -1,5 +1,5 @@
 .hero {
-  padding: 48px 0 90px;
+  padding: 110px 0 90px;
 }
 
 .container {
@@ -23,7 +23,7 @@
   letter-spacing: 0.26px;
 }
 
-.title>span {
+.title > span {
   display: block;
 }
 
@@ -51,8 +51,7 @@
   margin-top: 20px;
 }
 
-.primaryButton,
-.secondaryButton {
+.storeButton {
   display: inline-flex;
   gap: 10px;
   align-items: center;
@@ -60,31 +59,31 @@
   width: 253px;
   height: 58px;
   padding: 0 32px;
+  border: 1px solid rgb(61 220 132 / 15%);
   border-radius: 999px;
+  background: #121a1a;
   color: var(--color-text);
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
   letter-spacing: -0.31px;
+  transition:
+    border-color 0.2s ease,
+    background-color 0.2s ease,
+    transform 0.2s ease;
 }
 
-.primaryButton {
-  border: 0;
-  background: #376666;
+.storeButton:hover {
+  border-color: rgb(61 220 132 / 35%);
+  background: rgb(55 102 102 / 20%);
+  transform: translateY(-1px);
 }
 
-.secondaryButton {
-  border: 1px solid rgb(55 102 102 / 40%);
-  background: transparent;
-}
-
-.primaryButton img,
-.secondaryButton img {
-  width: 16px;
-  height: 16px;
+.storeButton img {
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
   object-fit: contain;
-  filter: brightness(0) invert(1);
 }
 
 .portfolioCard {
@@ -94,8 +93,7 @@
   border: 1px solid rgb(55 102 102 / 40%);
   border-radius: 52px;
   background:
-    linear-gradient(180deg, rgb(61 220 132 / 8%) 0%, rgb(0 0 0 / 0%) 30%),
-    #0b1212;
+    linear-gradient(180deg, rgb(61 220 132 / 8%) 0%, rgb(0 0 0 / 0%) 30%), #0b1212;
 }
 
 .cardTop {
@@ -178,7 +176,8 @@
 .assetName img {
   width: 15px;
   height: 15px;
-  filter: invert(72%) sepia(12%) saturate(394%) hue-rotate(164deg) brightness(89%) contrast(88%);
+  filter: invert(72%) sepia(12%) saturate(394%) hue-rotate(164deg) brightness(89%)
+    contrast(88%);
 }
 
 .assetCard span {
@@ -199,7 +198,7 @@
 
 @media (max-width: 1280px) {
   .hero {
-    padding: 48px 0 72px;
+    padding: 110px 0 72px;
   }
 
   .container {
@@ -222,7 +221,7 @@
 
 @media (max-width: 640px) {
   .hero {
-    padding: 28px 0 56px;
+    padding: 68px 0 56px;
   }
 
   .container {
@@ -248,24 +247,24 @@
 
   .actions {
     display: grid;
-    gap: 12px;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
     height: auto;
     margin-top: 18px;
   }
 
-  .primaryButton,
-  .secondaryButton {
+  .storeButton {
     width: 100%;
-    height: 44px;
-    padding: 0 18px;
+    height: 46px;
+    gap: 8px;
+    padding: 0 12px;
     font-size: 13px;
     line-height: 18px;
   }
 
-  .primaryButton img,
-  .secondaryButton img {
-    width: 14px;
-    height: 14px;
+  .storeButton img {
+    width: 18px;
+    height: 18px;
   }
 
   .portfolioCard {

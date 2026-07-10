@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+  <defs>
+    <mask id="plus-cutout">
+      <rect width="24" height="24" fill="white"/>
+      <path
+        d="M18.2 15.85V19.55M16.35 17.7H20.05"
+        stroke="black"
+        stroke-width="1.8"
+        stroke-linecap="round"
+      />
+    </mask>
+  </defs>
+
+  <!-- Wallet top -->
+  <path
+    d="M4.2 7.2V6.7A2.2 2.2 0 0 1 6.4 4.5H15.2A2.2 2.2 0 0 1 17.4 6.7V7.2"
+    stroke="#94A3B8"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Wallet body, intentionally stopped before the badge area -->
+  <path
+    d="M4.2 7.2H16.7A2.3 2.3 0 0 1 19 9.5V13.2"
+    stroke="#94A3B8"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M15 11.2H19V13.9H15A1.35 1.35 0 1 1 15 11.2Z"
+    stroke="#94A3B8"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <path
+    d="M4.2 7.2V15.7A2.3 2.3 0 0 0 6.5 18H14.2"
+    stroke="#94A3B8"
+    stroke-width="1.6"
+    stroke-linecap="round"
+    stroke-linejoin="round"
+  />
+
+  <!-- Green badge with fully transparent plus cutout -->
+  <circle
+    cx="18.2"
+    cy="17.7"
+    r="3.75"
+    fill="#3DDC84"
+    mask="url(#plus-cutout)"
+  />
+</svg>

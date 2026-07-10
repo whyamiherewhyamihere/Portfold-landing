@@ -1,8 +1,6 @@
 .funds {
   padding: 96px 0 72px;
-  background: linear-gradient(180deg,
-      rgb(55 102 102 / 20%) 0%,
-      rgb(0 0 0 / 0%) 100%);
+  background: linear-gradient(180deg, rgb(55 102 102 / 20%) 0%, rgb(0 0 0 / 0%) 100%);
 }
 
 .head {

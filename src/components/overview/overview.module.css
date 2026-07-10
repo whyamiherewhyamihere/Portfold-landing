@@ -261,11 +261,10 @@
     font-size: 11px;
     line-height: 16px;
   }
-    @media (width <=640px) {
-  
-      .content h2,
-      .content p {
-        text-align: left;
-      }
+  @media (width <=640px) {
+    .content h2,
+    .content p {
+      text-align: left;
     }
+  }
 }

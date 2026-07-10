@@ -1,7 +1,7 @@
-import binanceIcon from '../../assets/icons/binance.svg';
+import binanceIcon from '../../assets/icons/Binance-Icon-Logo.wine.svg';
 import bitgetIcon from '../../assets/icons/bitget-token-new-bgb-logo.svg';
-import ethereumIcon from '../../assets/icons/ethereum.svg';
-import solanaIcon from '../../assets/icons/solana.svg';
+import ethereumIcon from '../../assets/icons/ethereum-eth-logo.svg';
+import solanaIcon from '../../assets/icons/solana-sol-logo.svg';
 import { Container } from '../../shared/ui/container/container';
 
 import styles from './services.module.css';

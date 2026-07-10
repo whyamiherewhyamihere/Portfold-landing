@@ -87,8 +87,8 @@
     font-size: 32px;
     line-height: 36px;
     letter-spacing: -0.2px;
-      margin: 0 0 36px;
-        text-align: left;
+    margin: 0 0 36px;
+    text-align: left;
   }
 
   .list {
@@ -116,9 +116,9 @@
 
   .answer {
     padding: 0 20px 20px;
-      font-size: 14px;
-      line-height: 22px;
-      letter-spacing: -0.15px;
-      animation: answerOpen 0.22s ease both;
+    font-size: 14px;
+    line-height: 22px;
+    letter-spacing: -0.15px;
+    animation: answerOpen 0.22s ease both;
   }
 }

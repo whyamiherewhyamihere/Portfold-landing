@@ -29,8 +29,8 @@
 .grid {
   display: grid;
   grid-template-areas:
-    "connect connect backup"
-    "share history history";
+    'connect connect backup'
+    'share history history';
   grid-template-columns: 411px 414px 411px;
   grid-template-rows: 388px 418px;
   gap: 20px;
@@ -42,8 +42,7 @@
   border: 1px solid rgb(61 220 132 / 15%);
   border-radius: 32px;
   background:
-    linear-gradient(180deg, rgb(61 220 132 / 8%) 0%, rgb(0 0 0 / 0%) 30%),
-    #121a1a;
+    linear-gradient(180deg, rgb(61 220 132 / 8%) 0%, rgb(0 0 0 / 0%) 30%), #121a1a;
 }
 
 .card h3 {
@@ -100,7 +99,7 @@
   display: block;
 }
 
-.cardTop>div {
+.cardTop > div {
   max-width: 610px;
 }
 
@@ -149,6 +148,7 @@
 .inputList span {
   position: relative;
   display: flex;
+  gap: 10px;
   align-items: center;
   height: 48px;
   padding: 0 24px;
@@ -160,24 +160,33 @@
   font-weight: 700;
 }
 
+.connectionIcon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
 .inputList span::after {
   position: absolute;
   top: 50%;
   right: -32px;
   width: 32px;
   height: 4px;
-  background: linear-gradient(90deg,
-      rgb(61 220 132 / 100%) 0%,
-      rgb(51 188 112 / 89%) 11%,
-      rgb(41 157 93 / 78%) 22%,
-      rgb(31 127 74 / 67%) 33%,
-      rgb(22 98 56 / 56%) 44%,
-      rgb(13 71 39 / 44%) 56%,
-      rgb(6 45 23 / 33%) 67%,
-      rgb(2 22 8 / 22%) 78%,
-      rgb(0 3 1 / 11%) 89%,
-      rgb(0 0 0 / 0%) 100%);
-  content: "";
+  background: linear-gradient(
+    90deg,
+    rgb(61 220 132 / 100%) 0%,
+    rgb(51 188 112 / 89%) 11%,
+    rgb(41 157 93 / 78%) 22%,
+    rgb(31 127 74 / 67%) 33%,
+    rgb(22 98 56 / 56%) 44%,
+    rgb(13 71 39 / 44%) 56%,
+    rgb(6 45 23 / 33%) 67%,
+    rgb(2 22 8 / 22%) 78%,
+    rgb(0 3 1 / 11%) 89%,
+    rgb(0 0 0 / 0%) 100%
+  );
+  content: '';
   transform: translateY(-50%);
 }
 
@@ -197,12 +206,14 @@
   left: 0;
   width: 2px;
   height: 192px;
-  background: repeating-linear-gradient(to bottom,
-      rgb(61 220 132 / 40%) 0,
-      rgb(61 220 132 / 40%) 4px,
-      transparent 4px,
-      transparent 6px);
-  content: "";
+  background: repeating-linear-gradient(
+    to bottom,
+    rgb(61 220 132 / 40%) 0,
+    rgb(61 220 132 / 40%) 4px,
+    transparent 4px,
+    transparent 6px
+  );
+  content: '';
 }
 
 .filter img {
@@ -229,9 +240,11 @@
   align-content: center;
   border: 1px solid rgb(61 220 132 / 40%);
   border-radius: 16px;
-  background: linear-gradient(135deg,
-      rgb(55 102 102 / 40%) 0%,
-      rgb(61 220 132 / 20%) 100%);
+  background: linear-gradient(
+    135deg,
+    rgb(55 102 102 / 40%) 0%,
+    rgb(61 220 132 / 20%) 100%
+  );
   text-align: center;
 }
 
@@ -242,18 +255,20 @@
   left: -32px;
   width: 32px;
   height: 4px;
-  background: linear-gradient(90deg,
-      rgb(0 0 0 / 0%) 0%,
-      rgb(0 3 1 / 11%) 11%,
-      rgb(2 22 8 / 22%) 22%,
-      rgb(6 45 23 / 33%) 33%,
-      rgb(13 71 39 / 44%) 44%,
-      rgb(22 98 56 / 56%) 56%,
-      rgb(31 127 74 / 67%) 67%,
-      rgb(41 157 93 / 78%) 78%,
-      rgb(51 188 112 / 89%) 89%,
-      rgb(61 220 132 / 100%) 100%);
-  content: "";
+  background: linear-gradient(
+    90deg,
+    rgb(0 0 0 / 0%) 0%,
+    rgb(0 3 1 / 11%) 11%,
+    rgb(2 22 8 / 22%) 22%,
+    rgb(6 45 23 / 33%) 33%,
+    rgb(13 71 39 / 44%) 44%,
+    rgb(22 98 56 / 56%) 56%,
+    rgb(31 127 74 / 67%) 67%,
+    rgb(41 157 93 / 78%) 78%,
+    rgb(51 188 112 / 89%) 89%,
+    rgb(61 220 132 / 100%) 100%
+  );
+  content: '';
 }
 
 .portfolioBox::before {
@@ -468,10 +483,10 @@
 
   .grid {
     grid-template-areas:
-      "connect"
-      "backup"
-      "share"
-      "history";
+      'connect'
+      'backup'
+      'share'
+      'history';
     grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto;
   }
@@ -604,145 +619,154 @@
     padding: 24px;
   }
 
-    .backupCard {
-      min-height: 300px;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-      text-align: left;
-    }
-  
-    .fingerprint {
-      width: 72px;
-      height: 72px;
-      align-self: center;
-      margin-bottom: 24px;
-    }
-  
-    .backupCard h3,
-    .backupCard p {
-      width: 100%;
-      text-align: left;
-    }
-  
-    .backupBadge {
-      align-self: flex-start;
-    }
+  .backupCard {
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .fingerprint {
+    width: 72px;
+    height: 72px;
+    align-self: center;
+    margin-bottom: 24px;
+  }
+
+  .backupCard h3,
+  .backupCard p {
+    width: 100%;
+    text-align: left;
+  }
+
+  .backupBadge {
+    align-self: flex-start;
+  }
 
   .people {
     gap: 12px;
     margin-top: 28px;
   }
 
- .person {
-   grid-template-columns: 40px 1fr auto;
-   height: auto;
-   min-height: 80px;
-   gap: 12px;
-   padding: 12px;
-   border-radius: 22px;
- }
+  .person {
+    grid-template-columns: 40px 1fr auto;
+    height: auto;
+    min-height: 80px;
+    gap: 12px;
+    padding: 12px;
+    border-radius: 22px;
+  }
 
- .role {
-   grid-column: auto;
-   align-self: center;
-   width: fit-content;
-   height: 28px;
-   margin-top: 0;
-   padding: 4px 10px;
-   font-size: 12px;
-   white-space: nowrap;
- }
+  .role {
+    grid-column: auto;
+    align-self: center;
+    width: fit-content;
+    height: 28px;
+    margin-top: 0;
+    padding: 4px 10px;
+    font-size: 12px;
+    white-space: nowrap;
+  }
 
-    .trash {
-      width: 42px;
-      height: 42px;
-    }
-  
-    .trash img {
-      width: 20px;
-      height: 20px;
-    }
-    .historyBox {
-      display: grid;
-      grid-template-columns: 24px minmax(0, 1fr) auto;
-      gap: 10px 12px;
-      align-items: start;
-      margin-top: 28px;
-      padding: 18px;
-      border-radius: 20px;
-    }
-  
-    .trash {
-      grid-column: 1;
-      grid-row: 1;
-      display: grid;
-      width: 24px;
-      height: 24px;
-      place-items: center;
-      border: 0;
-      background: transparent;
-    }
-  
-    .trash img {
-      width: 18px;
-      height: 18px;
-    }
-  
-    .historyBox>div:nth-child(2) {
-      grid-column: 2;
-      grid-row: 1;
-      min-width: 0;
-    }
-  
-    .historyBox em {
-      grid-column: 3;
-      grid-row: 1;
-      align-self: start;
-      justify-self: end;
-      width: fit-content;
-      height: 28px;
-      margin: 0;
-      padding: 5px 10px;
-      font-size: 11px;
-      white-space: nowrap;
-    }
-  
-    .card .saved {
-      grid-column: 1 / -1;
-      display: grid;
-      grid-template-columns: 24px minmax(0, 1fr);
-      gap: 12px;
-      align-items: start;
-      font-size: 13px;
-      line-height: 20px;
-    }
-  
-    .card .saved img {
-      width: 18px;
-      height: 18px;
-      justify-self: center;
-      margin-top: 1px;
-    }
-        .shareCard {
-          position: relative;
-        }
-    
-        .shareCard h3 {
-          display: block;
-          padding-right: 40px;
-          text-align: left;
-        }
-    
-        .shareCard h3 img {
-          position: absolute;
-          top: 24px;
-          right: 24px;
-          width: 24px;
-          height: 24px;
-        }
-    
-        .shareCard>p {
-          text-align: left;
-        }
+  .trash {
+    width: 42px;
+    height: 42px;
+  }
+
+  .trash img {
+    width: 20px;
+    height: 20px;
+  }
+  .historyBox {
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr) auto;
+    gap: 10px 12px;
+    align-items: start;
+    margin-top: 28px;
+    padding: 18px;
+    border-radius: 20px;
+  }
+
+  .trash {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    width: 24px;
+    height: 24px;
+    place-items: center;
+    border: 0;
+    background: transparent;
+  }
+
+  .trash img {
+    width: 18px;
+    height: 18px;
+  }
+
+  .historyBox > div:nth-child(2) {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .historyBox em {
+    grid-column: 3;
+    grid-row: 1;
+    align-self: start;
+    justify-self: end;
+    width: fit-content;
+    height: 28px;
+    margin: 0;
+    padding: 5px 10px;
+    font-size: 11px;
+    white-space: nowrap;
+  }
+
+  .card .saved {
+    grid-column: 1 / -1;
+    display: grid;
+    grid-template-columns: 24px minmax(0, 1fr);
+    gap: 12px;
+    align-items: start;
+    font-size: 13px;
+    line-height: 20px;
+  }
+
+  .card .saved img {
+    width: 18px;
+    height: 18px;
+    justify-self: center;
+    margin-top: 1px;
+  }
+  .shareCard {
+    position: relative;
+  }
+
+  .shareCard h3 {
+    display: block;
+    padding-right: 40px;
+    text-align: left;
+  }
+
+  .shareCard h3 img {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+    width: 24px;
+    height: 24px;
+  }
+
+  .shareCard > p {
+    text-align: left;
+  }
+  .inputList span {
+    gap: 8px;
+    padding: 0 16px;
+  }
+
+  .connectionIcon {
+    width: 16px;
+    height: 16px;
+  }
 }

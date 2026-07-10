@@ -4,11 +4,13 @@
 }
 
 .title {
-  margin: 0 0 64px;
-  color: #94a3b8;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
+  max-width: 900px;
+  margin: 0 auto 64px;
+  color: #fff;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 48px;
+  letter-spacing: 0.35px;
   text-align: center;
 }
 
@@ -27,7 +29,7 @@
 
 .chip {
   display: inline-flex;
-  gap: 24px;
+  gap: 22px;
   align-items: center;
   justify-content: center;
   height: 78px;
@@ -64,11 +66,14 @@
 }
 
 .label img {
-  width: 15px;
-  height: 15px;
+  width: 22px;
+  height: 22px;
   flex-shrink: 0;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+}
+.binance .label img {
+  width: 24px;
+  height: 24px;
 }
 
 .statusBadge {
@@ -117,7 +122,10 @@
   }
 
   .title {
+    max-width: 680px;
     margin-bottom: 40px;
+    font-size: 40px;
+    line-height: 44px;
   }
 
   .firstRow,
@@ -138,10 +146,14 @@
   }
 
   .title {
-    max-width: 280px;
-    margin: 0 auto 28px;
-    font-size: 14px;
-    line-height: 22px;
+    max-width: 330px;
+    margin: 0 0 32px;
+    color: #fff;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: -0.2px;
+    text-align: left;
   }
 
   .rows {
@@ -171,8 +183,13 @@
   }
 
   .label img {
-    width: 12px;
-    height: 12px;
+    width: 18px;
+    height: 18px;
+  }
+
+  .binance .label img {
+    width: 20px;
+    height: 20px;
   }
 
   .statusBadge {

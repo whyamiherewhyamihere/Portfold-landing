@@ -13,7 +13,7 @@ export function Footer() {
             <Link className={styles.logo} to="/">
               <img src={logoIcon} alt="" />
               <span>Portfold</span>
-           </Link>
+            </Link>
 
             <p>
               Manage exchanges, wallets, and manually added crypto assets in one secure
@@ -39,10 +39,9 @@ export function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>© 2026 Portfold. All rights reserved.</p> 
+          <p>© 2026 Portfold. All rights reserved.</p>
         </div>
       </Container>
     </footer>
   );
 }
-

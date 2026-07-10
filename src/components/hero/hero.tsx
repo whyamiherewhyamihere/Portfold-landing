@@ -1,10 +1,10 @@
 import { useEffect, useRef } from 'react';
 
-import areaChart from '../../assets/images/AreaChart.png';
-import androidIcon from '../../assets/icons/android.svg';
-import appleIcon from '../../assets/icons/apple.svg';
+import appStoreIcon from '../../assets/icons/Applestore.svg';
 import bitcoinIcon from '../../assets/icons/bitcoinsv.svg';
 import ethereumIcon from '../../assets/icons/ethereum.svg';
+import googlePlayIcon from '../../assets/icons/Googleplay.svg';
+import areaChart from '../../assets/images/AreaChart.png';
 import solanaIcon from '../../assets/icons/solana.svg';
 import { Container } from '../../shared/ui/container/container';
 
@@ -26,7 +26,9 @@ export function Hero({ onDownloadActionsVisibleChange }: HeroProps) {
   useEffect(() => {
     const target = actionsRef.current;
 
-    if (!target) return;
+    if (!target) {
+      return;
+    }
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -35,7 +37,7 @@ export function Hero({ onDownloadActionsVisibleChange }: HeroProps) {
       {
         threshold: 0,
         rootMargin: '-80px 0px 0px 0px',
-      }
+      },
     );
 
     observer.observe(target);
@@ -58,20 +60,28 @@ export function Hero({ onDownloadActionsVisibleChange }: HeroProps) {
           </h1>
 
           <p className={styles.text}>
-            Connect your exchanges and wallets, add assets manually, and see your
-            entire crypto portfolio in one place. Portfold can track your balances, but
-            it cannot trade or withdraw your funds.
+            Connect your exchanges and wallets, add assets manually, and see your entire
+            crypto portfolio in one place. Portfold can track your balances, but it cannot
+            trade or withdraw your funds.
           </p>
 
           <div className={styles.actions} ref={actionsRef} id="download">
-            <a className={styles.primaryButton} href="#">
-              <img src={androidIcon} alt="" />
-              Download for Android
+            <a
+              className={styles.storeButton}
+              href="#"
+              aria-label="Download Portfold from Google Play"
+            >
+              <img src={googlePlayIcon} alt="" />
+              <span>Google Play</span>
             </a>
 
-            <a className={styles.secondaryButton} href="#">
-              <img src={appleIcon} alt="" />
-              Download for iPhone
+            <a
+              className={styles.storeButton}
+              href="#"
+              aria-label="Download Portfold from the App Store"
+            >
+              <img src={appStoreIcon} alt="" />
+              <span>App Store</span>
             </a>
           </div>
         </div>
@@ -95,6 +105,7 @@ export function Hero({ onDownloadActionsVisibleChange }: HeroProps) {
                   <img src={asset.icon} alt="" />
                   <span>{asset.name}</span>
                 </div>
+
                 <strong>{asset.value}</strong>
               </div>
             ))}

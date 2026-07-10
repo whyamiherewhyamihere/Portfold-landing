@@ -1,5 +1,5 @@
-import androidIcon from '../../assets/icons/android.svg';
-import appleIcon from '../../assets/icons/apple.svg';
+import appStoreIcon from '../../assets/icons/Applestore.svg';
+import googlePlayIcon from '../../assets/icons/Googleplay.svg';
 import logoIcon from '../../assets/icons/logo.svg';
 
 import styles from './header.module.css';
@@ -26,12 +26,12 @@ export function Header({ showDownloadIcons }: HeaderProps) {
 
         {showDownloadIcons && (
           <div className={styles.downloadIcons}>
-            <a href="#" aria-label="Download for Android">
-              <img src={androidIcon} alt="" />
+            <a href="#" aria-label="Download Portfold from Google Play">
+              <img src={googlePlayIcon} alt="" />
             </a>
 
-            <a href="#" aria-label="Download for iPhone">
-              <img src={appleIcon} alt="" />
+            <a href="#" aria-label="Download Portfold from the App Store">
+              <img src={appStoreIcon} alt="" />
             </a>
           </div>
         )}
